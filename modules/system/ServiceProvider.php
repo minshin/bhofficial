@@ -84,7 +84,7 @@ class ServiceProvider extends ModuleServiceProvider
         /*
          * Boot plugins
          */
-        $pluginManager = PluginManager::instance()->bootAll();
+        PluginManager::instance()->bootAll();
 
         parent::boot('system');
     }
@@ -229,6 +229,7 @@ class ServiceProvider extends ModuleServiceProvider
         $this->registerConsoleCommand('plugin.install', 'System\Console\PluginInstall');
         $this->registerConsoleCommand('plugin.remove', 'System\Console\PluginRemove');
         $this->registerConsoleCommand('plugin.refresh', 'System\Console\PluginRefresh');
+        $this->registerConsoleCommand('plugin.migration', 'System\Console\PluginMigration');
 
         $this->registerConsoleCommand('theme.install', 'System\Console\ThemeInstall');
         $this->registerConsoleCommand('theme.remove', 'System\Console\ThemeRemove');

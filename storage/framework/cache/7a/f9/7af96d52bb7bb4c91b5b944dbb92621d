@@ -1,0 +1,26 @@
+1490189313a:1:{s:11:"service.htm";a:9:{s:8:"fileName";s:11:"service.htm";s:7:"content";s:357:"title = "content"
+url = "/service/content/:id"
+layout = "default"
+
+[boheservice]
+postsPerPage = "5"
+postPage = "boheservice"
+==
+
+<section class="section-wrap">
+   <div class="container">
+       <div class="row">
+           <main class="col-md-8 main-content" >
+               {% partial 'service.htm' %}
+           </main>
+       </div>
+   </div>
+</section>";s:5:"mtime";i:1490183510;s:6:"markup";s:228:"<section class="section-wrap">
+   <div class="container">
+       <div class="row">
+           <main class="col-md-8 main-content" >
+               {% partial 'service.htm' %}
+           </main>
+       </div>
+   </div>
+</section>";s:4:"code";N;s:5:"title";s:7:"content";s:3:"url";s:20:"/service/content/:id";s:6:"layout";s:7:"default";s:11:"boheservice";a:2:{s:12:"postsPerPage";s:1:"5";s:8:"postPage";s:11:"boheservice";}}}

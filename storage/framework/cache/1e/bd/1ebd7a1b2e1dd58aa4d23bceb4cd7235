@@ -1,0 +1,8 @@
+1490189313a:1:{s:9:"login.htm";a:9:{s:8:"fileName";s:9:"login.htm";s:7:"content";s:141:"title = "Account"
+url = "/account/:code?"
+layout = "default"
+[account]
+redirect = "/blog/:0?"
+paramCode = "code"
+==
+{% component 'account' %}";s:5:"mtime";i:1487389648;s:6:"markup";s:25:"{% component 'account' %}";s:4:"code";N;s:5:"title";s:7:"Account";s:3:"url";s:15:"/account/:code?";s:6:"layout";s:7:"default";s:7:"account";a:2:{s:8:"redirect";s:9:"/blog/:0?";s:9:"paramCode";s:4:"code";}}}

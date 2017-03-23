@@ -1,0 +1,25 @@
+1490189313a:1:{s:13:"blogposts.htm";a:9:{s:8:"fileName";s:13:"blogposts.htm";s:7:"content";s:343:"title = "Blog"
+url = "/blog/:page?"
+layout = "default"
+
+[blogPosts]
+postsPerPage = "5"
+postPage = "blogpost"
+==
+<section class="section-wrap">
+   <div class="container">
+       <div class="row">
+           <main class="col-md-8 main-content" >
+               {% partial 'blog-posts.htm' %}
+           </main>
+       </div>
+   </div>
+</section>";s:5:"mtime";i:1487348008;s:6:"markup";s:231:"<section class="section-wrap">
+   <div class="container">
+       <div class="row">
+           <main class="col-md-8 main-content" >
+               {% partial 'blog-posts.htm' %}
+           </main>
+       </div>
+   </div>
+</section>";s:4:"code";N;s:5:"title";s:4:"Blog";s:3:"url";s:12:"/blog/:page?";s:6:"layout";s:7:"default";s:9:"blogPosts";a:2:{s:12:"postsPerPage";s:1:"5";s:8:"postPage";s:8:"blogpost";}}}

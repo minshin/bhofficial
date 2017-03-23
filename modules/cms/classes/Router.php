@@ -8,7 +8,7 @@ use Event;
 use SystemException;
 use October\Rain\Router\Router as RainRouter;
 use October\Rain\Router\Helper as RouterHelper;
-
+use Log;
 /**
  * The router parses page URL patterns and finds pages by URLs.
  *
@@ -162,7 +162,8 @@ class Router
         if (!strlen(File::extension($fileName))) {
             $fileName .= '.htm';
         }
-
+        Log::info($fileName);
+        Log::info("ppppppp1");
         $router = $this->getRouterObject();
         return $router->url($fileName, $parameters);
     }

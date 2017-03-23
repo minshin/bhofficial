@@ -1,0 +1,25 @@
+1490189313a:1:{s:11:"thelist.htm";a:9:{s:8:"fileName";s:11:"thelist.htm";s:7:"content";s:347:"title = "list"
+url = "/article"
+layout = "default"
+
+[articlethelist]
+postsPerPage = "1"
+postPage = "articlethelist"
+==
+<section class="section-wrap">
+   <div class="container">
+       <div class="row">
+           <main class="col-md-8 main-content" >
+               {% partial 'thelist.htm' %}
+           </main>
+       </div>
+   </div>
+</section>";s:5:"mtime";i:1490180418;s:6:"markup";s:228:"<section class="section-wrap">
+   <div class="container">
+       <div class="row">
+           <main class="col-md-8 main-content" >
+               {% partial 'thelist.htm' %}
+           </main>
+       </div>
+   </div>
+</section>";s:4:"code";N;s:5:"title";s:4:"list";s:3:"url";s:8:"/article";s:6:"layout";s:7:"default";s:14:"articlethelist";a:2:{s:12:"postsPerPage";s:1:"1";s:8:"postPage";s:14:"articlethelist";}}}

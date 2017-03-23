@@ -1,0 +1,20 @@
+1490189362a:1:{s:11:"service.htm";a:5:{s:8:"fileName";s:11:"service.htm";s:7:"content";s:289:"
+{% set post = boheservice.post %}
+<div class="container">
+   
+    <article id="72" class="post">
+        <div class="post-head">
+            <h1 class="post-title">{{ post.title }}</h1>
+            <h2 class="post-title">{{ post.content_html|raw }}</h2>
+            
+        </div>
+</div>";s:5:"mtime";i:1490189316;s:6:"markup";s:288:"{% set post = boheservice.post %}
+<div class="container">
+   
+    <article id="72" class="post">
+        <div class="post-head">
+            <h1 class="post-title">{{ post.title }}</h1>
+            <h2 class="post-title">{{ post.content_html|raw }}</h2>
+            
+        </div>
+</div>";s:4:"code";N;}}
