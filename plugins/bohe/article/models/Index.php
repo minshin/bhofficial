@@ -23,8 +23,8 @@ class Index extends Model
 	public function getLevelOptions($value, $formData)
 	{
 		return [
-				'1' => '普通',
-				'2' => '高级',
+				'1' => '普通的',
+				'2' => '高级的',
 				
 		];
 	}
