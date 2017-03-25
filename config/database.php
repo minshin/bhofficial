@@ -54,7 +54,7 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'localhost',
+            'host'      => 'db',
             'port'      => '3306',
             'database'  => 'boheofficial',
             'username'  => 'root',
