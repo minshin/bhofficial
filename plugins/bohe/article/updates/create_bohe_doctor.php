@@ -19,6 +19,9 @@ class CreateBoheDoctor extends Migration
             $table->string('type')->nullable();
             $table->integer('level')->nullable();
             $table->boolean('state')->default(true);
+            $table->string('url')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('wechat')->nullable();
             $table->timestamps();
         });
     }

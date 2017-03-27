@@ -56,7 +56,19 @@ secondaryTabs:
         level:
             label: '级别'
             span: left 
-            type: dropdown  
+            type: dropdown 
+        phone:
+            label: '手机'
+            span: left 
+            type: text 
+        wechat:
+            label: '微信'
+            span: left 
+            type: text   
+        url:
+            label: '链接'
+            span: left 
+            type: text 
         
       
 
