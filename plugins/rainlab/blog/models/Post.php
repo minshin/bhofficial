@@ -85,7 +85,17 @@ class Post extends Model
         'featured_images' => ['System\Models\File', 'order' => 'sort_order'],
         'content_images' => ['System\Models\File']
     ];
-
+    /*
+     * 分类的下拉菜单
+     */
+    public function getTypeOptions($value, $formData)
+    {
+    	return [
+    			'1' => '服务项目',
+    			'2' => '薄荷百科',
+    
+    	];
+    }
     /**
      * @var array The accessors to append to the model's array form.
      */

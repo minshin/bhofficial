@@ -84,6 +84,12 @@ return [
         'all_blog_posts' => 'All blog posts',
 
     ],
+		
+	'type' => [
+				'type' => '类别',
+				'type_placeholder' => '请选择类别'
+		
+		],
     'settings' => [
         'category_title' => 'Category List',
         'category_description' => 'Displays a list of blog categories on the page.',

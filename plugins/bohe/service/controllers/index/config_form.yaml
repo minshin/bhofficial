@@ -1,6 +1,6 @@
 name: Bohe
-modelClass: Bohe\service\Models\Index
-form: $/Bohe/service/models/index/fields.yaml
+modelClass: Bohe\Service\Models\Index
+form: $/bohe/service/models/index/fields.yaml
 defaultRedirect: bohe/service/index
 create:
     redirect: 'bohe/service/index/update/:id'
