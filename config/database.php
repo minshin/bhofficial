@@ -54,10 +54,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => 'localhost',
-            'port'      => '',
-            'database'  => 'homestead',
-            'username'  => 'homestead',
+            'host'      => 'db',
+            'port'      => '3306',
+            'database'  => 'boheofficial',
+            'username'  => 'root',
             'password'  => 'secret',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
