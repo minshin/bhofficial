@@ -1,5 +1,5 @@
 title: Bohe
-modelClass: Bohe\service\Models\Index
+modelClass: Bohe\Service\Models\Index
 list: $/bohe/service/models/index/columns.yaml
 recordUrl: 'bohe/service/index/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
