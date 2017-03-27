@@ -51,6 +51,14 @@ class Index extends Model
 	 * Remove this line if timestamps are defined in the database table.
 	 */
 	//public $timestamps = false;
+	/*
+	 * 主键
+	 */
+	protected $primaryKey = 'id';
+	/*
+	 * type  values are encoded as JSON before saving and converted to arrays after fetching.
+	 */
+	protected $jsonable = ['type'];
 
 	/**
 	 * @var string The database table used by the model.

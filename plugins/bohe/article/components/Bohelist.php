@@ -57,19 +57,7 @@ class Bohelist extends ComponentBase
         /*
          * List all the posts, eager load their categories
          */
-        $posts = ArticleIndex::paginate(1);
-        /*
-         * Add a "url" helper attribute for linking to each post and category
-         */
-//         $posts->each(function($post) {
-//             Log::info("ooooooooooooooo");
-//             $post->setUrl($this->postPage, $this->controller);
-//             Log::info($this->postPage);
-//             Log::info($post->url);
-//             $post->categories->each(function($category) {
-//                 $category->setUrl($this->categoryPage, $this->controller);
-//             });
-//         });
+        $posts = ArticleIndex::where('level', '2')->get();
 
         return $posts;
     }
