@@ -30,6 +30,9 @@ $(function(){
   bloggingisotope();
   $(window).smartresize(bloggingisotope)
 
+  
+  //滚动时 动画
+  new WOW().init();
 
 })
 
@@ -82,6 +85,12 @@ var scheduleTab = function() {
       placeholder : "{{'assets/img/loading.gif' |theme}}",
          effect: "fadeIn"
    });
+
+
+
+// banner 动画效果
+$('#bootstrap-touch-slider').bsTouchSlider();
+
 
 
 

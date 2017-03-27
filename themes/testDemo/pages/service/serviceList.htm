@@ -20,7 +20,8 @@ hidden="0"
 <!-- 服务项目导航begin -->
 
 <div id="seviceList">
-  {% partial 'index/serviceList' %}
+  {% set type='service' %}
+  {% partial 'index/serviceList' type=type %}
 </div>
 
 <!-- 服务项目导航end -->
