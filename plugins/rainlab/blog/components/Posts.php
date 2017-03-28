@@ -168,11 +168,13 @@ class Posts extends ComponentBase
     protected function listPosts()
     {
         $category = $this->category ? $this->category->id : null;
+        $type = $this->param('type');
 
         /*
          * List all the posts, eager load their categories
          */
-        $posts = BlogPost::with('categories')->listFrontEnd([
+        if($type==1){
+        $posts = BlogPost::where('type', 1)->listFrontEnd([
             'page'       => $this->property('pageNumber'),
             'sort'       => $this->property('sortOrder'),
             'perPage'    => $this->property('postsPerPage'),
@@ -180,7 +182,16 @@ class Posts extends ComponentBase
             'category'   => $category,
             'exceptPost' => $this->property('exceptPost'),
         ]);
-
+        }elseif($type==2){
+        	$posts = BlogPost::where('type', 2)->listFrontEnd([
+        			'page'       => $this->property('pageNumber'),
+        			'sort'       => $this->property('sortOrder'),
+        			'perPage'    => $this->property('postsPerPage'),
+        			'search'     => trim(input('search')),
+        			'category'   => $category,
+        			'exceptPost' => $this->property('exceptPost'),
+        	]);
+        }
         /*
          * Add a "url" helper attribute for linking to each post and category
          */
