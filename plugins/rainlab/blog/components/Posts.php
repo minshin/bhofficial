@@ -117,6 +117,14 @@ class Posts extends ComponentBase
                 'default'           => '',
                 'group'             => 'Exceptions',
             ],
+        	'type' => [
+                'description'       => 'type of blog',
+                'title'             => 'title',
+                'default'           => 10,
+                'type'              => 'string',
+                'validationPattern' => '^[0-9]+$',
+                'validationMessage' => 'The Max Items value is required and should be integer.'
+            ]
         ];
     }
 
@@ -168,11 +176,11 @@ class Posts extends ComponentBase
     protected function listPosts()
     {
         $category = $this->category ? $this->category->id : null;
-        $type = $this->param('type');
-
+        $type = $this->property('type');
         /*
          * List all the posts, eager load their categories
          */
+  //      var_dump($type);die;
         if($type==1){
         $posts = BlogPost::where('type', 1)->listFrontEnd([
             'page'       => $this->property('pageNumber'),
