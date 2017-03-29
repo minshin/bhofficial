@@ -208,7 +208,6 @@ class Posts extends ComponentBase
         $posts->each(function($post) {
             Log::info("ooooooooooooooo");
             $post->setUrl($this->postPage, $this->controller);
-            $post->title='this a title';
             $views=MostPost::where('post_id', $post->id)->first();
             if($views){
             	$post->visits=$views->visits;
