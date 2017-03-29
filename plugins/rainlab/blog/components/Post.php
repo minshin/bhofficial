@@ -10,7 +10,7 @@ class Post extends ComponentBase
      * @var RainLab\Blog\Models\Post The post model used for display.
      */
     public $post;
-
+    public $thepost;
     /**
      * @var string Reference to the page name for linking to categories.
      */
@@ -51,6 +51,8 @@ class Post extends ComponentBase
     {  //var_dump($this->loadPost());die;
         $this->categoryPage = $this->page['categoryPage'] = $this->property('categoryPage');
         $this->post = $this->page['post'] = $this->loadPost();
+     
+        $this->thepost = $this->page['thepost'] = $this->getPost();
     }
 
     protected function loadPost()
@@ -75,5 +77,13 @@ class Post extends ComponentBase
         }
 
         return $post;
+    }
+    /*
+     * 获取单数据
+     */
+    protected function getPost(){
+    	$id = $this->param('id');
+    	$thepost = BlogPost::where('id', $id)->first();
+    	return  $thepost;
     }
 }

@@ -61,7 +61,14 @@ class Plugin extends PluginBase
                 Session::put('postsviewed', []);
             }
 
-            $post = PostModel::where('slug', $component->getController()->getRouter()->getParameters()['slug'])->first();
+           // $post = PostModel::where('slug', $component->getController()->getRouter()->getParameters()['slug'])->first();
+           if(array_key_exists('slug', $component->getController()->getRouter()->getParameters())){
+           	$post = PostModel::where('slug', $component->getController()->getRouter()->getParameters()['slug'])->first();
+           	
+           }else{
+           	$post = PostModel::where('id', $component->getController()->getRouter()->getParameters()['id'])->first();
+           	
+           }
 
             if (!is_null($post) && !in_array($post->getKey(), Session::get('postsviewed'))) {
                 $this->setViews($post);
