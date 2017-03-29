@@ -3,6 +3,7 @@
 use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
 use RainLab\Blog\Models\Post as BlogPost;
+use PolloZen\MostVisited\Models\Visits as MostPost;
 
 class Post extends ComponentBase
 {
@@ -11,6 +12,7 @@ class Post extends ComponentBase
      */
     public $post;
     public $thepost;
+    public $views;
     /**
      * @var string Reference to the page name for linking to categories.
      */
@@ -53,6 +55,7 @@ class Post extends ComponentBase
         $this->post = $this->page['post'] = $this->loadPost();
      
         $this->thepost = $this->page['thepost'] = $this->getPost();
+        $this->views = $this->page['views'] = $this->getViews();
     }
 
     protected function loadPost()
@@ -85,5 +88,13 @@ class Post extends ComponentBase
     	$id = $this->param('id');
     	$thepost = BlogPost::where('id', $id)->first();
     	return  $thepost;
+    }
+    /*
+     * 获取单数据
+     */
+    protected function getViews(){
+    	$id = $this->param('id');
+    	$views = MostPost::where('post_id', $id)->first();
+    	return  $views;
     }
 }

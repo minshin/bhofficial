@@ -5,6 +5,7 @@ use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
 use RainLab\Blog\Models\Post as BlogPost;
 use RainLab\Blog\Models\Category as BlogCategory;
+use PolloZen\MostVisited\Models\Visits as MostPost;
 use Log;
 
 class Posts extends ComponentBase
@@ -148,6 +149,7 @@ class Posts extends ComponentBase
         $this->prepareVars();
 
         $this->category = $this->page['category'] = $this->loadCategory();
+        //var_dump($this->listPosts());die;
         $this->posts = $this->page['posts'] = $this->listPosts();
 
         /*
@@ -206,8 +208,13 @@ class Posts extends ComponentBase
         $posts->each(function($post) {
             Log::info("ooooooooooooooo");
             $post->setUrl($this->postPage, $this->controller);
-            Log::info($this->postPage);
-            Log::info($post->url);
+            $post->title='this a title';
+            $views=MostPost::where('post_id', $post->id)->first();
+            if($views){
+            	$post->visits=$views->visits;
+            }else{
+            	$post->visits=0;
+            }
             $post->categories->each(function($category) {
                 $category->setUrl($this->categoryPage, $this->controller);
             });

@@ -1,3 +1,7 @@
+2017年3月29日的数据库相关
+浏览数表添加
+php artisan plugin:migration PolloZen\\MostVisited create_visits_table.php Y （new）
+--------------------------------------------------------------------------------
 2017年3月28日的数据库相关
 1目前用到的数据表
 1）医生表
